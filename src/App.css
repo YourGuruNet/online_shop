@@ -1,8 +1,8 @@
 /* Roots ļauj izveidot krāsai nosaukumu, lai to atkārtotu pēctam atkal!  */
-:root{
+:root {
   --DarkBlue: rgba(36, 8, 136, 0.781);
   --lightBlue: rgb(45, 159, 235);
-  --mainYellow: #fb3; 
+  --mainYellow: #fb3;
   --mainDark: black;
   --mainBlue: linear-gradient(to left, rgb(15, 240, 206), rgb(0, 191, 224));
   --maintop: #26272b;
@@ -11,35 +11,36 @@
 body {
   padding-top: 3.8rem;
   padding-right: 0rem;
-  font-family: "Roboto" !important; 
+  font-family: "Roboto" !important;
   background: var(--mainBlue) !important;
   color: var(--mainDark) !important;
   min-height: 100%;
 }
 .text-title {
-  font-family: "Chilanka" !important; 
+  font-family: "Chilanka" !important;
   letter-spacing: 0.3rem;
   text-transform: uppercase;
+  font-size: 3rem;
 }
-.text-blue {
-  color: var(--mainBlue);
+.text-yellow {
+  color: var(--mainYellow);
 }
-.text-braight {
+.text-bright {
   color: var(--lightBlue);
 }
 /* Navbar ***************************************  */
 .hover-link:hover {
   color: var(--mainYellow) !important;
 }
-.sticky-nav-bar{
+.sticky-nav-bar {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999; ;
+  z-index: 9999;
 }
-.navbar-back{
-  background:   #26272b;
-  color: var(--mainYellow) ;
+.navbar-back {
+  background: #26272b;
+  color: var(--mainYellow);
 }
 .navbar-test {
   font-size: 2.5rem;
@@ -47,193 +48,164 @@ body {
   text-align: center;
   color: var(--mainYellow);
 }
-@media (max-width: 1000px)
-{
+@media (max-width: 1000px) {
   .navbar-test {
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-  text-align: center;
-  color: var(--mainYellow);
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    text-align: center;
+    color: var(--mainYellow);
   }
   body {
     padding-top: 6rem !important;
   }
-  .mob-view{
+  .mob-view {
     max-width: 200px;
     margin-left: 2.2rem;
   }
-  .mob-button{
+  .mob-button {
     font-size: 10px !important;
   }
-
 }
 
-
-
 /*Footer************************************************************/
-.site-footer
-{
-  background-color:#26272b;
-  padding:45px 0 20px;
-  font-size:15px;
-  line-height:24px;
-  color:var(--mainYellow);
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--mainYellow);
   min-height: 100%;
   margin-bottom: -50px;
 }
-.site-footer hr
-{
-  border-top-color:var(--mainYellow);
-  opacity:0.5
+.site-footer hr {
+  border-top-color: var(--mainYellow);
+  opacity: 0.5;
 }
-.site-footer hr.small
-{
-  margin:20px 0
+.site-footer hr.small {
+  margin: 20px 0;
 }
-.site-footer h6
-{
-  color:var(--mainYellow);
-  font-size:16px;
-  text-transform:uppercase;
-  margin-top:5px;
-  letter-spacing:2px
+.site-footer h6 {
+  color: var(--mainYellow);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
 }
-.site-footer a
-{
-  color:#02b4fa;
+.site-footer a {
+  color: #02b4fa;
 }
-.site-footer a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
 }
-.footer-links
-{
-  padding-left:0;
-  list-style:none
+.footer-links {
+  padding-left: 0;
+  list-style: none;
 }
-.footer-links li
-{
-  display:block
+.footer-links li {
+  display: block;
 }
-.footer-links a
-{
-  color:var(--mainYellow)
+.footer-links a {
+  color: var(--mainYellow);
 }
-.footer-links a:active,.footer-links a:focus,.footer-links a:hover
-{
-  color:#3366cc;
-  text-decoration:none;
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
 }
-.footer-links.inline li
-{
-  display:inline-block
+.footer-links.inline li {
+  display: inline-block;
 }
-.site-footer .social-icons
-{
-  text-align:right
+.site-footer .social-icons {
+  text-align: right;
 }
-.site-footer .social-icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:0;
-  border-radius:100%;
-  background-color:var(--mainYellow)
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: var(--mainYellow);
 }
-.copyright-text
-{
-  margin:0
+.copyright-text {
+  margin: 0;
 }
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
   }
 }
-@media (max-width:767px)
-{
-  .site-footer
-  {
-    padding-bottom:0
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
   }
-  .site-footer .copyright-text,.site-footer .social-icons
-  {
-    text-align:center
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
   }
 }
-.social-icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
 }
-.social-icons li
-{
-  display:inline-block;
-  margin-bottom:4px
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
 }
-.social-icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size:13px
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
 }
-.social-icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size:16px;
-  display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
-.social-icons a:active,.social-icons a:focus,.social-icons a:hover
-{
-  color:#fff;
-  background-color:#29aafe
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
 }
-.social-icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size:14px
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
 }
-.social-icons a.facebook:hover
-{
-  background-color:#3b5998
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
 }
-.social-icons a.twitter:hover
-{
-  background-color:#00aced
+.social-icons a.twitter:hover {
+  background-color: #00aced;
 }
-.social-icons a.linkedin:hover
-{
-  background-color:#007bb6
+.social-icons a.linkedin:hover {
+  background-color: #007bb6;
 }
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89;
 }
-@media (max-width:767px)
-{
-  .social-icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
   }
 }
 /*404 PAGE *********************************************/
@@ -248,8 +220,8 @@ body {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .notfound {
@@ -267,7 +239,7 @@ body {
 }
 
 .notfound .notfound-404 h1 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 236px;
   font-weight: 200;
   margin: 0px;
@@ -277,12 +249,12 @@ body {
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .notfound .notfound-404 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 28px;
   font-weight: 400;
   text-transform: uppercase;
@@ -298,7 +270,7 @@ body {
 }
 
 .notfound a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   display: inline-block;
   font-weight: 700;
   text-decoration: none;
@@ -340,16 +312,14 @@ body {
   }
 }
 /* Home Page slider ***********************************************/
-.slider1{
+.slider1 {
   text-align: center;
 }
 .slick-dots {
   bottom: 25px !important;
-  
 }
 .slides-page {
   background-color: black;
-  
 }
 /*Contact Form**********************************************/
 .contact-box {
