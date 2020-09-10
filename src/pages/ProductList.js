@@ -12,7 +12,7 @@ export default class ProductList extends Component {
           <div className="container">
             <ProductTitle name="All" title="products" />{" "}
             {/* Inside ProductTitle we give a value for props so title element know what exact to show on screen */}
-            <div className="row" style={{ display: "flow-root" }}>
+            <div className="row">
               <ProductConsumer>
                 {/* Creat a function to get prop from Context.js value is a function name but we can use any word that's don't meter */}
                 {(value) => {
