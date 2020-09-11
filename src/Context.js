@@ -7,15 +7,33 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
   state = {
-    products: storeProducts,
+    products: [],
     detailProduct: detailProduct,
   };
+  //I use componentDidMount so I can get data from Data.js to add data with no references to my product page!
+  // {...item} means that we copy all items from data.js
+  componentDidMount() {
+    this.setProducts();
+  }
+  setProducts = () => {
+    let tempProducts = [];
+    storeProducts.forEach((item) => {
+      const singleItem = { ...item };
+      tempProducts = [...tempProducts, singleItem];
+    });
+    this.setState(() => {
+      return { products: tempProducts };
+    });
+  };
+  // This function set all Data.js products as tempProducts
+
   handleDetail = () => {
     console.log("Hello form product");
   };
-  addToCard = () => {
-    console.log("Product is in card");
+  addToCard = id => {
+    console.log(`Product is in cart.id is ${id}`);
   };
+
   render() {
     return (
       <ProductContext.Provider

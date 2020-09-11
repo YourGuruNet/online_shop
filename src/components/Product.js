@@ -45,9 +45,9 @@ export default class Product extends Component {
     );
   }
 }
+
 //PropType is built-in the react app and it helps you debug the mistakes so you give any props a necessary type
 //for example price needs to be a number
-
 Product.propTypes = {
   product:PropTypes.shape({
     id:PropTypes.number,
@@ -80,8 +80,8 @@ const ProductWrapper = styled.div`
   }
 }
 .img-container{
-  position:relative;
-  overflow:hidden; /*Use because other way picture we'll be all over the screen */
+  position: relative;
+  overflow: hidden; /*Use because other way picture we'll be all over the screen */
 }
 .card-img-top{
   transition: all 0.5s linear;

@@ -35,7 +35,7 @@ class Navbar extends Component {
           <Link to="/Cart" className="ml-auto">
             <Button type="button">
               {" "}
-              <i class="fas fa-cart-plus"></i> Shopping Cart
+              <i class="fas fa-shopping-bag"/> Shopping Cart
             </Button>
           </Link>
         </nav>
