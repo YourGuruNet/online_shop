@@ -29,7 +29,7 @@ class Details extends Component {
               {/* product info*/}
               <div className="row">
                 <div className="col-10 mx-auto col-md-6 my-3">
-                  <img src={img} className="img-fluid" alt="product" />
+                  <img src={img} className="img-fluid" alt="product" style={{maxHeight: '40rem'}}/>
                 </div>
                 {/* product text */}
                 <div className="col-10 mx-auto col-md-6 my-3 text-capitalize">
@@ -56,24 +56,31 @@ class Details extends Component {
                     className="text-title text-uppercase mt-3 mb-2"
                     style={{ fontSize: "1.2rem" }}
                   >
-                    Price:{" "}
+                    Price:
                     <strong style={{ color: "#00ff00" }}>${price}</strong>
                   </h2>
                   {/* buttons*/}
                   <div className="row">
                     <Link to="/ProductList">
-                      <Button style={{ marginInlineStart: "1rem" }}>
+                      <Button style={{ marginLeft: "0.5rem" }}>
                         <i class="fas fa-arrow-circle-left" /> back to products
                       </Button>
                     </Link>
                     <Button
-                      style={{ marginInlineStart: "1rem" }}
+                      cart
+                      style={{ marginLeft: "0.5rem" }}
                       disabled={inCart ? true : false}
                       onClick={() => {
-                        value.addToCard(id);
+                        value.addToCart(id);
                       }}
                     >
-                      {inCart ? "inCart" : "Add to cart"}
+                      {/* Made two if statements first are for the icon, second is for the extra button name*/}
+                      {inCart ? (
+                        <i class="fas fa-shopping-bag" />
+                      ) : (
+                        <i className="fas fa-cart-plus" />
+                      )}
+                      {inCart ? " Already In Cart" : " Add to card"}
                     </Button>
                   </div>
                 </div>
@@ -87,3 +94,19 @@ class Details extends Component {
 }
 
 export default Details;
+//I get props with Product Consumer from context.js and made a detail page for all products passing props
+/*{(value) => {
+          const {
+            id,
+            title,
+            company,
+            img,
+            info,
+            price,
+            inCart,
+          } = value.detailProduct;
+          return ( 
+We take props from ProductsConsumer give them name value and return the product detail page */
+
+/* disabled={inCart ? true : false} this if statement checks, if the product is in the cart, then
+ the button is disabled, otherwise button is active.*/

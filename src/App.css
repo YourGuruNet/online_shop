@@ -4,7 +4,7 @@
   --lightBlue: rgb(45, 159, 235);
   --mainYellow: #fb3;
   --mainDark: black;
-  --mainBlue: linear-gradient(to left, rgb(0, 68, 102), rgb(0, 208, 245));
+  --mainBlue: linear-gradient(to left, rgb(0, 208, 245),rgb(0, 68, 102));
   --maintop: #26272b;
 }
 /*body ir lapas pamata standarts! !importent lieto, lai tas būtu noteikts un nepārklātos ar bootstrap!*/
