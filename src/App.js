@@ -11,6 +11,7 @@ import Footer from "./pages/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Modal from "./components/Modal";
 
 // Using react Route to switch between pages
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route component={Default} />
       </Switch>
+      <Modal />
       <Footer />
     </React.Fragment>
   );

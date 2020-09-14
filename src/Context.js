@@ -5,11 +5,14 @@ const ProductContext = React.createContext();
 //Provider
 //Consumer
 
+//states are starting values
 class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
     cart: [],
+    modalOpen: false,
+    modalProduct: detailProduct,
   };
   //I use componentDidMount so I can get data from Data.js to add data with no references to my product page!
   // {...item} means that we copy all items from data.js
@@ -48,7 +51,7 @@ class ProductProvider extends Component {
   // I created temp Product so i don't accidentally change any value
   addToCart = (id) => {
     let tempProducts = [...this.state.products]; //give the value for tempProducts
-    const index = tempProducts.indexOf(this.getItem(id)); // give value for index 
+    const index = tempProducts.indexOf(this.getItem(id)); // give value for index
     const product = tempProducts[index]; // products is the same as tempProducts by index
     product.inCart = true; // now change product inCart value to true
     product.count = 1; // count from 0 to 1
@@ -67,13 +70,32 @@ class ProductProvider extends Component {
     );
   };
 
+  //This function opens a small product card when clicking on product insert to card icon at the product page
+  //The function returns the modal product as a product from the list and set modalOpen to true from false,
+  //that's mean that the card opens
+  openModal = (id) => {
+    const product = this.getItem(id);
+    this.setState(() => {
+      return { modalProduct: product, modalOpen: true };
+    });
+  };
+  //The function returns opposite and set modalOpen to false from true,
+  //that's mean that the card closed
+  closeModal = () => {
+    this.setState(() => {
+      return { modalOpen: false };
+    });
+  };
+
   render() {
     return (
       <ProductContext.Provider
         value={{
           ...this.state,
           handleDetail: this.handleDetail,
-          addToCard: this.addToCart,
+          addToCart: this.addToCart,
+          openModal: this.openModal,
+          closeModal: this.closeModal,
         }}
       >
         {this.props.children}
@@ -88,3 +110,12 @@ const ProductConsumer = ProductContext.Consumer;
 export { ProductProvider, ProductConsumer };
 // {this.props.children}  gives us to ability to insert different elements ass a props for example (<h1>Hello World!</h1>)
 // value for props.children can be text inside "" ore as on our example it is a object
+/*<ProductContext.Provider
+        value={{
+          ...this.state,
+          handleDetail: this.handleDetail,
+          addToCard: this.addToCart,
+          openModal:this.openModal,
+          closeModal:this.closeModal,
+        }}
+      > //This is a way how to pass props to another page ore element.*/

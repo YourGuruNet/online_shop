@@ -72,6 +72,7 @@ class Details extends Component {
                       disabled={inCart ? true : false}
                       onClick={() => {
                         value.addToCart(id);
+                        value.openModal(id);
                       }}
                     >
                       {/* Made two if statements first are for the icon, second is for the extra button name*/}
@@ -80,7 +81,7 @@ class Details extends Component {
                       ) : (
                         <i className="fas fa-cart-plus" />
                       )}
-                      {inCart ? " Already In Cart" : " Add to card"}
+                      {inCart ? " Already In Cart" : " Add to cart"}
                     </Button>
                   </div>
                 </div>
