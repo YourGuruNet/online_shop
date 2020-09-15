@@ -3,7 +3,8 @@ import React, { Children } from "react";
 // wee pass props to ProductTitle and the just include them to return position
 export default function ProductTitle({ name, title }) {
   return (
-    <div className="row">
+    <div className="row" style={{marginRight: '0',
+      marginLeft: '0'}}>
       <div className="col-10 mx-auto my-2 text-center text-title">
         <h1 className="text-capitalize font-weight-bold text-title">
           {name} <strong className="text-yellow">{title}</strong>

@@ -10,9 +10,12 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: [],
+    cart: storeProducts,
     modalOpen: false,
     modalProduct: detailProduct,
+    cartSubTotal: 0,
+    CartTax: 0,
+    CartTotal: 0,
   };
   //I use componentDidMount so I can get data from Data.js to add data with no references to my product page!
   // {...item} means that we copy all items from data.js
@@ -86,6 +89,19 @@ class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
+  // This is a place wer you can find functions for Cart page!
+  increment = (id) => {
+    console.log("This is increment method");
+  };
+  decrement = (id) => {
+    console.log("This is decrement method");
+  };
+  removeItem = (id) => {
+    console.log("Item is removed");
+  };
+  clearCart = (id) => {
+    console.log('Cart is empty')
+  }
 
   render() {
     return (
@@ -96,6 +112,10 @@ class ProductProvider extends Component {
           addToCart: this.addToCart,
           openModal: this.openModal,
           closeModal: this.closeModal,
+          increment: this.increment,
+          decrement: this.decrement,
+          removeItem: this.removeItem,
+          clearCart: this.clearCart,
         }}
       >
         {this.props.children}
