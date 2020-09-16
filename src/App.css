@@ -1,7 +1,7 @@
 /* Roots ļauj izveidot krāsai nosaukumu, lai to atkārtotu pēctam atkal!  */
 :root {
   --DarkBlue: rgba(36, 8, 136, 0.781);
-  --lightBlue: rgb(45, 159, 235);
+  --lightBlue: rgb(220, 237, 248);
   --mainYellow: #fb3;
   --mainDark: black;
   --mainBlue: linear-gradient(to left, rgb(0, 208, 245), rgb(0, 68, 102));
@@ -30,6 +30,31 @@ body {
 }
 .text-bright {
   color: var(--lightBlue);
+}
+/*Button Cart page*********************************************/
+.btn-cart {
+  color: var(--mainYellow);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  border-radius: 0 !important;
+}
+.btn-cart:hover{
+color: var(--lightBlue)
+}
+/* Cart page **********************************************/
+.cart-position {
+  position: absolute;
+  top: 1.2rem;
+}
+.cart-item-hover:hover{
+  background-color: rgba(0, 0, 0, 0.301);
+  cursor: pointer;
+}
+.cart-column-position {
+  position: absolute;
+  top: 0.3rem;
 }
 /* Navbar ***************************************  */
 .hover-link:hover {
@@ -67,6 +92,10 @@ body {
   }
   .mob-button {
     font-size: 10px !important;
+  }
+  .cart-position {
+    position: absolute;
+    top: 0;
   }
 }
 

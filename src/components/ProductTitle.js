@@ -4,7 +4,7 @@ import React, { Children } from "react";
 export default function ProductTitle({ name, title }) {
   return (
     <div className="row" style={{marginRight: '0',
-      marginLeft: '0'}}>
+      marginLeft: '0', paddingTop: '1.5rem'}}>
       <div className="col-10 mx-auto my-2 text-center text-title">
         <h1 className="text-capitalize font-weight-bold text-title">
           {name} <strong className="text-yellow">{title}</strong>

@@ -7,7 +7,7 @@ import CartList from './CartList';
 class Cart extends Component {
   render() {
     return (
-      <section style={{ marginTop: "1rem" }}>
+      <section>
         <ProductConsumer>
           {(value) => {
             const { cart } = value;
@@ -15,8 +15,10 @@ class Cart extends Component {
               return (
                 <React.Fragment>
                   <ProductTitle name="Shopping" title="cart" />
+                  <div style={{background:'rgba(0, 0, 0, 0.3)', marginBottom: '2rem' }}>
                   <CartColumns />
-                  <CartList value={value} />
+                  <CartList value={value}/>
+                  </div>
                 </React.Fragment>
               );
             } else {

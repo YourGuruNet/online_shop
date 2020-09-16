@@ -8,7 +8,7 @@ export default class ProductList extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="py-5">
+        <div>
           <div className="container">
             <ProductTitle name="All" title="products" />
             {/* Inside ProductTitle we give a value for props so title element know what exact to show on screen */}
