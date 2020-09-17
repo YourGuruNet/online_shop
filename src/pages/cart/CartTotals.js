@@ -2,8 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../components/Button";
 import styled from "styled-components";
+import PayPalButton from "./PayPalButton";
 //Function based component
-export default function CartTotals({ value }) {
+export default function CartTotals({ value, history }) {
   const { cartSubTotal, CartTax, CartTotal, clearCart } = value;
   return (
     <React.Fragment>
@@ -15,21 +16,30 @@ export default function CartTotals({ value }) {
                 <i class="fas fa-arrow-circle-left" /> back to products
               </Button>
             </Link>
-              <ButtonClear  style={{ marginLeft: "0.5rem", marginBottom: "0.5rem" }} onClick={() => clearCart()}>
-              <i class="fas fa-trash-alt"/> clear cart
-              </ButtonClear >
-             <h5>
-             <span className="text-cart">subtotal: </span>
-             <strong className="text-cart">{cartSubTotal} $</strong>
-             </h5>
-             <h5>
-             <span className="text-cart">Tax 21%: </span>
-             <strong className="text-cart">{CartTax} $</strong>
-             </h5>
-             <h5>
-             <span className="text-cart">Total: </span>
-             <strong className="text-cart">{CartTotal} $</strong>
-             </h5>
+            <ButtonClear
+              style={{ marginLeft: "0.5rem", marginBottom: "0.5rem" }}
+              onClick={() => clearCart()}
+            >
+              <i class="fas fa-trash-alt" /> clear cart
+            </ButtonClear>
+            <h5>
+              <span className="text-cart">subtotal: </span>
+              <strong className="text-cart">{cartSubTotal} $</strong>
+            </h5>
+            <h5>
+              <span className="text-cart">Tax 21%: </span>
+              <strong className="text-cart">{CartTax} $</strong>
+            </h5>
+            <h5>
+              <span className="text-cart">Total: </span>
+              <strong className="text-cart">{CartTotal} $</strong>
+            </h5>
+            {/*I pass necessary props for paypal button */}
+            <PayPalButton
+              total={CartTotal}
+              clearCart={clearCart}
+              history={history}
+            />
           </div>
         </div>
       </div>
@@ -37,7 +47,7 @@ export default function CartTotals({ value }) {
   );
 }
 
- const ButtonClear = styled.button`
+const ButtonClear = styled.button`
   padding: 0.3rem;
   text-transform: capitalize;
   font-size: 1rem;
@@ -46,7 +56,7 @@ export default function CartTotals({ value }) {
   cursor: pointer;
   transition: all 0.5s ease-in-out;
   background: red;
-    color: white;
+  color: white;
   &:hover {
     background: transparent;
     color: red;

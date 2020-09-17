@@ -19,7 +19,8 @@ class Cart extends Component {
                   <div style={{background:'rgba(0, 0, 0, 0.5)', marginBottom: '2rem' }}>
                   <CartColumns />
                   <CartList value={value}/>
-                  <CartTotals value={value}/>
+                  {/* I pass history props from react to Paypal Button */}
+                  <CartTotals value={value} history={this.props.history}/>
                   </div>
                 </React.Fragment>
               );
