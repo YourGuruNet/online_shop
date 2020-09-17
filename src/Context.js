@@ -10,7 +10,7 @@ class ProductProvider extends Component {
   state = {
     products: [],
     detailProduct: detailProduct,
-    cart: storeProducts,
+    cart: [],
     modalOpen: false,
     modalProduct: detailProduct,
     cartSubTotal: 0,
@@ -68,7 +68,7 @@ class ProductProvider extends Component {
         };
       },
       () => {
-        console.log(this.state);
+        this.addTotal();
       }
     );
   };
@@ -89,19 +89,117 @@ class ProductProvider extends Component {
       return { modalOpen: false };
     });
   };
-  // This is a place wer you can find functions for Cart page!
+  // This is a place wer you can find functions for Cart page!//////////////////////////////////////////////////////////
   increment = (id) => {
-    console.log("This is increment method");
+    let tempCart = [...this.state.cart];
+    //selected products are products wits id if it's mach by id
+    const selectedProduct = tempCart.find((item) => item.id === id);
+    //index is tempCart index from selected products
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+    // I take props from addToCart
+    product.count = product.count + 1;
+    product.total = product.count * product.price;
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+        };
+      },
+      () => {
+        this.addTotal();
+      }
+    );
   };
+
   decrement = (id) => {
-    console.log("This is decrement method");
+    let tempCart = [...this.state.cart];
+    //selected products are products wits id if it's mach by id
+    const selectedProduct = tempCart.find((item) => item.id === id);
+    //index is tempCart index from selected products
+    const index = tempCart.indexOf(selectedProduct);
+    const product = tempCart[index];
+    // I take props from addToCart
+    product.count = product.count - 1;
+    if (product.count === 0) {
+      this.removeItem(id)
+    } else {
+      product.total = product.count * product.price;
+      this.setState(
+        () => {
+          return {
+            cart: [...tempCart],
+          };
+        },
+        () => {
+          this.addTotal();
+        }
+      );
+    }
   };
+
   removeItem = (id) => {
-    console.log("Item is removed");
+    let tempProduct = [...this.state.products]; //made new variables
+    let tempCart = [...this.state.cart];
+    // If there well be missing id, then product with id that not mach well be removed.
+    tempCart = tempCart.filter((item) => item.id !== id);
+
+    //we made new template for product and now we can delate product from it and retune new product list
+    const index = tempProduct.indexOf(this.getItem(id));
+    let removedProduct = tempProduct[index];
+    removedProduct.inCart = false;
+    removedProduct.count = 0;
+    removedProduct.total = 0;
+
+    //we set agent that cart is back to tempCart where is deleted out missing id products.
+    //now we see on screen new tempProduct list
+    // add total is cleared
+    this.setState(
+      () => {
+        return {
+          cart: [...tempCart],
+          products: [...tempProduct],
+        };
+      },
+      () => {
+        this.addTotal();
+      }
+    );
   };
+
+  // Clear cart take my states and clear cart state to empty array
+  // and the we make callback function to setProduct template to zero agent and the same with addTotal()
   clearCart = (id) => {
-    console.log('Cart is empty')
-  }
+    this.setState(
+      () => {
+        return { cart: [] };
+      },
+      () => {
+        this.setProducts();
+        this.addTotal();
+      }
+    );
+  };
+
+  // I add parseFloat and toFixed so wee see tax number with 2 number after.
+  // addTotal just count values we pass to shopping cart! We get them from subtotal value with we get
+  // every time we insert something in to cart
+  //I pass this function to addToCart() function
+  addTotal = () => {
+    let subTotal = 0;
+    this.state.cart.map((item) => (subTotal += item.total));
+    const tempTax = subTotal * 0.21;
+    const tax = parseFloat(tempTax.toFixed(2));
+    const totalPrice = subTotal + tax;
+    const total = parseFloat(totalPrice.toFixed(2));
+    this.setState(() => {
+      return {
+        cartSubTotal: subTotal,
+        CartTax: tax,
+        CartTotal: total,
+      };
+    });
+  };
 
   render() {
     return (

@@ -25,6 +25,13 @@ body {
   text-transform: uppercase;
   font-size: 4rem;
 }
+.text-cart {
+  font-family: "Chilanka" !important;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: var(--lightBlue);
+}
 .text-yellow {
   color: var(--mainYellow);
 }
@@ -306,6 +313,17 @@ right:0;
   bottom: 0px;
   left: 0;
   right: 0;
+}
+.page444site{
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #211b19;
+  background: var(--mainYellow);
+  padding: 10px 5px;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 .notfound a {
