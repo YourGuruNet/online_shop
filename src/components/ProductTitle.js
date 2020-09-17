@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 // Made title component with included props (product name and title) so now we can use it to make similar product title in the same style
 // wee pass props to ProductTitle and the just include them to return position
 export default function ProductTitle({ name, title }) {
