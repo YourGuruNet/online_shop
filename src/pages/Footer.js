@@ -8,7 +8,7 @@ class Footer extends Component {
     return (
       <div className="footer-position">
         <div className="navbar-back">
-          <footer class="site-footer">
+          <footer className="site-footer">
             <div className="container">
               <div className="row">
                 <div className="col-sm-12 col-md-6">
@@ -26,27 +26,27 @@ class Footer extends Component {
                   <ul className="footer-links">
                     <Link to="/ProductList">
                       <li>
-                        <a>Phones</a>
+                        <p>Phones</p>
                       </li>
                     </Link>
                     <Link to="/ProductList">
                       <li>
-                        <a>Accessory's</a>
+                        <p>Accessory's</p>
                       </li>
                     </Link>
                     <Link to="/ProductList">
                       <li>
-                        <a>Headsets</a>
+                        <p>Headsets</p>
                       </li>
                     </Link>
                     <Link to="//ProductList">
                       <li>
-                        <a>USB</a>
+                        <p>USB</p>
                       </li>
                     </Link>
                     <Link to="/ProductList">
                       <li>
-                        <a>Memory Cards</a>
+                        <p>Memory Cards</p>
                       </li>
                     </Link>
                   </ul>
@@ -57,25 +57,25 @@ class Footer extends Component {
                   <ul className="footer-links">
                     <Link to="/about">
                       <li>
-                        <a>About Us</a>
+                        <p>About Us</p>
                       </li>
                     </Link>
                     <Link to="/contact">
                       <li>
-                        <a>Contact Us</a>
+                        <p>Contact Us</p>
                       </li>
                     </Link>
                     <Link to="/ProductList">
                       <li>
-                        <a>Products</a>
+                        <p>Products</p>
                       </li>
                     </Link>
                     <li>
-                      <a>Privacy Policy</a>
+                      <p>Privacy Policy</p>
                     </li>
                     <Link to="/">
                       <li>
-                        <a>Home</a>
+                        <p>Home</p>
                       </li>
                     </Link>
                   </ul>
@@ -88,9 +88,9 @@ class Footer extends Component {
                 <div className="col-md-8 col-sm-6 col-xs-12">
                   <p className="copyright-text">
                     Copyright &copy; {new Date().getFullYear()} All Rights
-                    Reserved by
+                    Reserved by &nbsp;
                     <Link to="/">
-                      <a> PhoneShop.com</a>
+                       PhoneShop.com
                     </Link>
                   </p>
                 </div>
@@ -99,12 +99,12 @@ class Footer extends Component {
                   <ul className="social-icons">
                     <li>
                       <a className="facebook" href="https://www.facebook.com/">
-                        <i class="fa fa-facebook"></i>
+                        <i className="fa fa-facebook"></i>
                       </a>
                     </li>
                     <li>
                       <a className="twitter" href="https://twitter.com/">
-                        <i class="fa fa-twitter"></i>
+                        <i className="fa fa-twitter"></i>
                       </a>
                     </li>
                     <li>
@@ -112,12 +112,12 @@ class Footer extends Component {
                         className="instagram"
                         href="https://www.instagram.com/"
                       >
-                        <i class="fa fa-instagram"></i>
+                        <i className="fa fa-instagram"></i>
                       </a>
                     </li>
                     <li>
                       <a className="linkedin" href="https://www.linkedin.com/">
-                        <i class="fa fa-linkedin"></i>
+                        <i className="fa fa-linkedin"></i>
                       </a>
                     </li>
                   </ul>

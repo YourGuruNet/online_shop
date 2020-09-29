@@ -9,7 +9,7 @@ class Navbar extends Component {
       <div className="navbar-back sticky-nav-bar">
         <nav className="mb-1 navbar navbar-expand-lg navbar-dark info-color ">
           <Link to="/">
-            <i class="fas fa-mobile-alt navbar-test">Phone Shop</i>
+            <i className="fas fa-mobile-alt navbar-test">Phone Shop</i>
           </Link>
           <ul className="navbar-nav align-item-center">
             <li className="nav-item ml-5">
@@ -35,7 +35,7 @@ class Navbar extends Component {
           <Link to="/Cart" className="ml-auto">
             <Button type="button">
               {" "}
-              <i class="fas fa-shopping-bag"/> Shopping Cart
+              <i className="fas fa-shopping-bag"/> Shopping Cart
             </Button>
           </Link>
         </nav>
