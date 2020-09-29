@@ -80,3 +80,4 @@ export default function CartItem({ item, value }) {
 }
 //d-lg-none says that its well not be showed on big screen
 //I made 2 const and import values of my products plus all functions i created for cart page in Context.js
+
