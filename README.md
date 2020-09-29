@@ -1,4 +1,3 @@
-hello
 <h1>Phone shop Webpage created with react.</h1>
 <h5>Check link hosted with netlify: <span> <a href="https://palmresort.netlify.app/" target="_blank">https://palmresort.netlify.app/</a> </span> </h5>
 <br/>
