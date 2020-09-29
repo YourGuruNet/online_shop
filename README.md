@@ -1,5 +1,5 @@
 <h1>Phone Shop webpage created with react.</h1>
-<h5>Check link hosted with netlify: <span> <a href="https://palmresort.netlify.app/" target="_blank">https://palmresort.netlify.app/</a> </span> </h5>
+<h5>Check link hosted with netlify: <span> <a href="https://palmresort.netlify.app/" target="_blank">https://phone-shop-react-gurunet.netlify.app/</a> </span> </h5>
 <br/>
 <img src="images-readme/picture-1.JPG" width="1080">
 <img src="images-readme/picture-2.JPG" width="1080">
